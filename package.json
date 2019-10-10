@@ -1,0 +1,36 @@
+{
+  "name": "bookLibrary",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/backend/server.js",
+    "build": "rm -rf ./dist && babel src -d dist",
+    "start:dev": "nodemon -r @babel/register src/backend/server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/plugin-proposal-export-default-from": "^7.5.2",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/register": "^7.6.2",
+    "eslint": "^6.5.1",
+    "eslint-plugin-react": "^7.15.1",
+    "nodemon": "^1.19.3"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.9.5",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "graphql": "^14.5.8",
+    "graphql-server-express": "^1.4.1",
+    "graphql-subscriptions": "^1.1.0",
+    "mongoose": "^5.7.3",
+    "subscriptions-transport-ws": "^0.9.16"
+  }
+}
