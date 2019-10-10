@@ -8,7 +8,6 @@ import {
 	GraphQLNonNull
 } from 'graphql'
 import { PubSub } from 'graphql-subscriptions';
-
 import Book from '../models/Book'
 import Author from '../models/Author'
 
@@ -95,8 +94,7 @@ const Mutation = new GraphQLObjectType({
 				name: { type: new GraphQLNonNull(GraphQLString) },
 				age: { type: GraphQLInt }
 			},
-			resolve(parent, { name, age }, { stoke }) {
-				console.log(stoke)
+			resolve(parent, { name, age }) {
 				let author = new Author({
 					name,
 					age
