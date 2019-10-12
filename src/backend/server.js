@@ -5,14 +5,9 @@ import schema from '../schema'
 import mongoose from 'mongoose'
 import { createServer } from 'http'
 import cors from 'cors'
-import pubsub from '../pubsub'
-
 
 const app = express()
-
-const server = new ApolloServer({ schema, context: {
-	pubsub
-} })
+const server = new ApolloServer({ schema })
 
 app.use(cors())
 
